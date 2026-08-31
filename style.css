@@ -534,7 +534,12 @@ footer {
     }
 
     .vantagem-card {
-        flex: 0 1 100%;
+        flex: 0 1 calc(50% - 10px); /* ANTES: 100% (empilhado) — agora força 2 colunas (2 em cima, 2 embaixo) */
+        padding: 20px 14px;
+    }
+
+    .vantagem-card p {
+        font-size: 1em; /* levemente menor, para o texto caber bem no card mais estreito */
     }
 
     .contato-form form {
@@ -547,5 +552,14 @@ footer {
         height: 48px;
         bottom: 90px;
         right: 15px;
+    }
+}
+
+/* NOVO: em telas bem estreitas (celulares pequenos/antigos), 2
+   colunas ficariam apertadas demais — volta a empilhar em 1 coluna
+   só nesse caso extremo. */
+@media (max-width: 380px) {
+    .vantagem-card {
+        flex: 0 1 100%;
     }
 }
