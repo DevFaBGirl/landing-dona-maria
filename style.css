@@ -514,6 +514,21 @@ footer {
         padding: 45px 25px;
     }
 
+    .depoimento::before,
+    .depoimento::after {
+        font-size: 3em; /* ANTES: 6em (herdado) — menor para não sobrepor o texto em telas estreitas */
+    }
+
+    .depoimento::before {
+        top: 5px;
+        left: 12px;
+    }
+
+    .depoimento::after {
+        bottom: -5px;
+        right: 12px;
+    }
+
     .depoimento p {
         font-size: 1.1em;
     }
