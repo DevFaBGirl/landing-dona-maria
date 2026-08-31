@@ -242,8 +242,7 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 
 ## 🧡 Créditos e Inspiração
 
-Feito com carinho para valorizar o sabor e a tradição dos produtos mineiros 🍞
-Design simples, acolhedor e otimizado para conversão.
+Este projeto é uma homenagem à minha avó, Maria Delmira da Silva, pela força com que abriu caminho para meu pai e para mim, e por todo o carinho, cuidado e afeto que me dedicou a vida inteira. Amo você infinitamente, voínha. Salve sua força ancestral, sei que sempre estará comigo. Gratidão por tanto🌿
 
 ## 👩🏽‍💻 Autora
 
