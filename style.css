@@ -438,7 +438,7 @@ footer {
     background-color: #8B4513;
     color: #fffaf2;
     text-align: center;
-    padding: 30px 15px;
+    padding: 35px 15px; /* ANTES: 30px 15px — um pouco mais de respiro acima/abaixo */
     font-size: 0.95em;
     margin-top: 40px;
     border-top: 3px solid #e0b973;
@@ -455,12 +455,12 @@ footer {
     width: 60%;
     height: 1px;
     background-color: #e0b973;
-    margin: 15px auto;
+    margin: 22px auto; /* ANTES: 15px auto — mais espaço entre a linha e o texto, deixa mais centralizado */
     opacity: 0.6;
 }
 
 .creditos {
-    font-size: 1.2em;
+    font-size: 1.05em; /* ANTES: 1.2em — um pouco menor, tanto no desktop quanto no mobile */
     color: #fff;
 }
 
@@ -555,9 +555,7 @@ footer {
     }
 }
 
-/* NOVO: em telas bem estreitas (celulares pequenos/antigos), 2
-   colunas ficariam apertadas demais — volta a empilhar em 1 coluna
-   só nesse caso extremo. */
+
 @media (max-width: 380px) {
     .vantagem-card {
         flex: 0 1 100%;
