@@ -1,34 +1,35 @@
 # 🧀 Landing Page - Direto de Minas Gerais
 
-Landing page desenvolvida para divulgar e facilitar os pedidos dos produtos congelados artesanais de **Dona Maria**, trazendo o sabor e a tradição de Minas Gerais direto para sua casa.
+**Instituição:** Senac EAD
 
-Este projeto foi criado como **Produção Textual Individual (PTI)** para a disciplina de desenvolvimento web, com o tema **"Landing Page para Autônomo"**.
+**Curso:** Análise e Desenvolvimento de Sistemas (ADS)
+
+**Disciplina:** Fundamentos de Programação Web
+
+**Professor autor:** Bruno de Oliveira
+
 
 ---
 
 ## 📋 Sobre a atividade
 
-**Instituição:** Senac EAD
+Landing page desenvolvida para divulgar e facilitar os pedidos dos produtos congelados artesanais de **Dona Maria**, trazendo o sabor e a tradição de Minas Gerais direto para sua casa.
 
-**Curso:** Análide e Desenvolvimento de sistemas
+Este projeto foi criado como **Produção Textual Individual (PTI)** para a disciplina de Fundamentos de Programação Web, com o tema **"Landing Page para Autônoma"**.
 
-**Disciplina:** Fundamentos de Programação Web
-
-**Professor:** Bruno de Oliveira
-
-**Atividade:** Produção Textual Individual (PTI)
-
-**Tema:** Landing Page para Autônoma/o
+**Tema:** Landing Page para Autônoma
 
 **Enunciado:** criar uma landing page para uma empresa/profissional autônomo de pequeno porte, com usuários chegando via buscadores ou anúncios em redes sociais. A página deve conter, em uma única tela, pelo menos 5 faixas de conteúdo: sobre a empresa, produtos/serviços oferecidos, vantagens e benefícios, uma chamada para contato através de formulário, e demais informações relevantes. A página deve ser responsiva (desktop e mobile) e construída com HTML, CSS e Flexbox.
 
 **Ramo escolhido:** venda de produtos artesanais congelados (autônoma/vendedora), Dona Maria Delmira da Silva, produtora de comidas típicas mineiras.
 
 ### Etapas da atividade
+
 - **Parte A > Prototipação:** escolha do ramo de negócio e planejamento das faixas de conteúdo da página.
 - **Parte B > Implementação:** desenvolvimento do site em HTML e CSS puros, com técnicas de layout responsivo (Flexbox + Media Queries).
 
 ### Entrega
+
 - Publicação do site em plataforma de hospedagem gratuita.
 - Envio do projeto completo em `.zip`, junto com o link do site publicado, no item de Produção Textual Individual da disciplina.
 
@@ -38,13 +39,13 @@ Este projeto foi criado como **Produção Textual Individual (PTI)** para a disc
 
 A página é dividida em **5 faixas de conteúdo**, conforme pedido:
 
-| # | Faixa | Requisito atendido |
-|---|-------|---------------------|
-| 1 | **Sobre a Dona Maria** (`.sobre`), com foto e texto lado a lado | Fala sobre a empresa/autônoma |
-| 2 | **Produtos** (`.products`) | Produtos/serviços oferecidos, com preços |
-| 3 | **Citação de Dona Maria** (`.depoimento`) | Reforço de identidade/depoimento, informação adicional relevante |
-| 4 | **Por que escolher a Dona Maria** (`.vantagens`) | Vantagens e benefícios |
-| 5 | **Fale com a gente + CTA flutuante do WhatsApp** (`.contato-form` + `.whatsapp-float`) | Chamada para contato através de **formulário**, complementada por um CTA direto para o WhatsApp |
+| #   | Faixa                                                                                  | Requisito atendido                                                                              |
+| --- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| 1   | **Sobre a Dona Maria** (`.sobre`), com foto e texto lado a lado                        | Fala sobre a empresa/autônoma                                                                   |
+| 2   | **Produtos** (`.products`)                                                             | Produtos/serviços oferecidos, com preços                                                        |
+| 3   | **Citação de Dona Maria** (`.depoimento`)                                              | Reforço de identidade/depoimento, informação adicional relevante                                |
+| 4   | **Por que escolher a Dona Maria** (`.vantagens`)                                       | Vantagens e benefícios                                                                          |
+| 5   | **Fale com a gente + CTA flutuante do WhatsApp** (`.contato-form` + `.whatsapp-float`) | Chamada para contato através de **formulário**, complementada por um CTA direto para o WhatsApp |
 
 Além disso, o cabeçalho (`header`), o rodapé (`footer`) e o botão flutuante do WhatsApp reforçam a identidade da marca e oferecem um canal extra de contato.
 
@@ -71,9 +72,11 @@ Além disso, o cabeçalho (`header`), o rodapé (`footer`) e o botão flutuante 
 ## 🖼️ Capturas de Tela
 
 ### 💻 Versão Desktop
+
 ![Versão Desktop](assets/desktop-preview.png)
 
 ### 📱 Versão Mobile
+
 ![Versão Mobile](assets/mobile-preview.png)
 
 ---
@@ -96,6 +99,7 @@ landing-dona-maria/
 ├── style.css
 ├── script.js
 ├── README.md
+├── .gitattributes
 └── assets/
     ├── pao-de-queijo.jpg
     ├── coxinha.jpg
@@ -109,6 +113,12 @@ landing-dona-maria/
     ├── mobile-preview.png
     └── preview.jpg
 ```
+
+---
+
+## 🔡 Padronização de quebra de linha (.gitattributes)
+
+O projeto inclui um arquivo `.gitattributes` com a regra `* text=auto`, que padroniza como o Git trata quebras de linha (`LF`/`CRLF`) entre diferentes sistemas operacionais. Sem esse arquivo, o Git costuma exibir avisos do tipo `warning: LF will be replaced by CRLF` ao adicionar arquivos em ambientes Windows — isso não indica nenhum problema no código, apenas uma diferença de convenção entre sistemas, mas o `.gitattributes` evita que o aviso apareça, deixando o comportamento explícito e consistente para qualquer pessoa que clonar o repositório.
 
 ---
 
@@ -130,9 +140,10 @@ landing-dona-maria/
 
 O projeto está publicado gratuitamente na **Vercel**:
 
-🔗 **Site publicado:** https://produtos-da-maria.vercel.app/
+🔗 **Site publicado:** https://landing-dona-maria.vercel.app/
 
 ### Como foi publicado
+
 1. Repositório do projeto conectado à conta da Vercel.
 2. Deploy automático a partir da branch principal, qualquer novo commit atualiza o site publicado.
 3. Nenhuma configuração de build adicional é necessária, pois o projeto é um site estático (HTML, CSS e um pequeno script JS).
@@ -141,38 +152,46 @@ O projeto está publicado gratuitamente na **Vercel**:
 
 ## 🧾 Catálogo de Produtos
 
-| Produto | Peso | Variações | Preço |
-|---|---|---|---|
-| 🧀 Pão de Queijo | 1kg (500g premium) | Tradicional | R$ 25,00 |
-| 🍗 Coxinha | 500g | Tradicional / Requeijão | R$ 25,00 |
-| 🥟 Pastel de Farinha de Milho | 480g | Queijo / Carne | R$ 25,00 |
-| 🍪 Broa | 400g | Tradicional / Goiabada / Doce de Leite | R$ 20,00 |
-| 🧈 Chipa | 1kg | Provolone / Parmesão | R$ 27,00 |
+| Produto                       | Peso               | Variações                              | Preço    |
+| ----------------------------- | ------------------ | -------------------------------------- | -------- |
+| 🧀 Pão de Queijo              | 1kg (500g premium) | Tradicional                            | R$ 25,00 |
+| 🍗 Coxinha                    | 500g               | Tradicional / Requeijão                | R$ 25,00 |
+| 🥟 Pastel de Farinha de Milho | 480g               | Queijo / Carne                         | R$ 25,00 |
+| 🍪 Broa                       | 400g               | Tradicional / Goiabada / Doce de Leite | R$ 20,00 |
+| 🧈 Chipa                      | 1kg                | Provolone / Parmesão                   | R$ 27,00 |
 
 ---
 
 ## ⚙️ Personalização
 
 ### 🔢 Alterar número do WhatsApp
+
 No arquivo `index.html`, localize o link do botão flutuante:
+
 ```html
-<a href="https://wa.me/55110000000?text=..." class="whatsapp-float">
+<a href="https://wa.me/55110000000?text=..." class="whatsapp-float"></a>
 ```
+
 Substitua o número pelo desejado, no formato: `55` + DDD + número (sem espaços ou símbolos).
 
 ### 💰 Atualizar preços
+
 Edite os valores dentro das tags:
+
 ```html
 <p class="product-price">R$ 25,00</p>
 ```
 
 ### 🖼️ Trocar imagens
+
 Substitua os arquivos dentro da pasta `/assets` mantendo os mesmos nomes, ou altere o caminho no atributo `src` das imagens no HTML.
 
 ### 📞 Máscara de telefone
+
 A formatação `(XX) XXXXX-XXXX` está no `script.js`, no bloco que escuta o evento `input` do campo `#telefone`. Ela sempre limita a 11 dígitos (2 do DDD + 9 do celular), para números de telefone fixo (10 dígitos) seria necessário ajustar essa lógica.
 
 ### 📝 Formulário de contato
+
 O formulário atual é apenas front-end (sem back-end/servidor de envio), o "envio" apenas mostra o modal de sucesso e recarrega a página. Para receber os dados de fato, é possível integrar com serviços gratuitos como Formspree, EmailJS ou Google Forms, adicionando o `action` correspondente na tag `<form>` e adaptando o `script.js`.
 
 ---
@@ -188,6 +207,7 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 ## 📝 Changelog
 
 ### Adaptação para o PTI (versão inicial)
+
 - ➕ Adicionada a faixa **"Sobre"** (requisito: falar sobre a empresa).
 - ➕ Adicionada a faixa **"Vantagens e benefícios"** com cards em Flexbox.
 - ➕ Adicionado **formulário de contato**, requisito explícito do enunciado.
@@ -195,6 +215,7 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 - 🧹 Corrigida duplicação de tag `</footer>` no HTML original.
 
 ### Segunda rodada (troca de identidade e refinamentos visuais)
+
 - ✏️ Nome do negócio trocado de **Ester** para **Dona Maria Delmira da Silva** (nome completo na seção "Sobre", "Dona Maria" nas demais faixas).
 - 🖼️ Faixa "Sobre" reestruturada: foto ao lado do texto, maior, com efeito de zoom ao passar o mouse, e uma lista de detalhes extras (origem, trajetória, especialidade).
 - 💬 Frase de destaque movida do topo da página para uma citação estilizada (`.depoimento`) entre Produtos e Vantagens, com aspas decorativas de abertura e fechamento.
@@ -206,10 +227,16 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 - 📖 Texto da seção "Sobre" justificado, para um bloco de leitura mais organizado.
 
 ### Terceira rodada (JavaScript e usabilidade do formulário)
+
 - ➕ Adicionado **`script.js`** como arquivo separado (antes o script ficava embutido no HTML), carregado no fim do `<body>`.
 - 📞 Implementada **máscara de telefone**: o campo formata automaticamente para `(XX) XXXXX-XXXX` enquanto a pessoa digita, limitando a 11 dígitos.
 - ✅ Implementado **modal de sucesso customizado** ao enviar o formulário, substitui o `alert()` nativo do navegador (que não pode ser estilizado), usando as cores do site. A página recarrega automaticamente ao clicar em "OK", o que também limpa os campos preenchidos.
 - 🧪 Testadas e descartadas duas alternativas ao longo do processo: uma mensagem de sucesso 100% em CSS (truque de checkbox + label) e elementos decorativos de canto (`decor-milho.png`/`decor-farinha.png`), ambas foram substituídas pelas soluções finais acima, por oferecerem melhor resultado visual e funcional.
+
+### Quarta rodada (ajustes de publicação e ambiente Git)
+
+- 🔗 URL de publicação atualizada de `produtos-da-maria.vercel.app` para `landing-dona-maria.vercel.app`, refletida no `index.html` (tags Open Graph/Twitter) e no `README.md`.
+- ➕ Adicionado **`.gitattributes`** (`* text=auto`), para padronizar quebras de linha entre sistemas operacionais e evitar avisos do Git ao adicionar arquivos.
 
 ---
 
