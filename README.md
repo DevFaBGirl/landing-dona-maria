@@ -42,7 +42,7 @@ A página é dividida em **5 faixas de conteúdo**, conforme pedido:
 | #   | Faixa                                                                                  | Requisito atendido                                                                              |
 | --- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | 1   | **Sobre a Dona Maria** (`.sobre`), com foto e texto lado a lado                        | Fala sobre a empresa/autônoma                                                                   |
-| 2   | **Produtos** (`.products`)                                                             | Produtos/serviços oferecidos, com preços                                                        |
+| 2   | **Nossos Produtos** (`.produtos`)                                                      | Produtos/serviços oferecidos, com preços                                                        |
 | 3   | **Citação de Dona Maria** (`.depoimento`)                                              | Reforço de identidade/depoimento, informação adicional relevante                                |
 | 4   | **Por que escolher a Dona Maria** (`.vantagens`)                                       | Vantagens e benefícios                                                                          |
 | 5   | **Fale com a gente + CTA flutuante do WhatsApp** (`.contato-form` + `.whatsapp-float`) | Chamada para contato através de **formulário**, complementada por um CTA direto para o WhatsApp |
@@ -53,7 +53,7 @@ Além disso, o cabeçalho (`header`), o rodapé (`footer`) e o botão flutuante 
 
 ## ✨ Funcionalidades
 
-- 📸 Catálogo visual com 5 produtos e preços: pão de queijo, broa, coxinha, pastel e chipa.
+- 📸 Catálogo visual com 5 produtos e preços: pão de queijo, broa, coxinha, pastel e chipa, agora com título de seção próprio ("Nossos Produtos").
 - 🧑🏽‍🍳 Foto (com efeito de zoom ao passar o mouse) e apresentação de Dona Maria na faixa "Sobre", com texto justificado e uma lista de detalhes (origem, trajetória, especialidade).
 - 💬 Citação/depoimento de Dona Maria, estilizado com aspas decorativas de abertura e fechamento.
 - 🎨 Cards de "Vantagens" com fundo dourado e tipografia serifada em itálico, visual mais clássico, sem ícones.
@@ -118,7 +118,7 @@ landing-dona-maria/
 
 ## 🔡 Padronização de quebra de linha (.gitattributes)
 
-O projeto inclui um arquivo `.gitattributes` com a regra `* text=auto`, que padroniza como o Git trata quebras de linha (`LF`/`CRLF`) entre diferentes sistemas operacionais. Sem esse arquivo, o Git costuma exibir avisos do tipo `warning: LF will be replaced by CRLF` ao adicionar arquivos em ambientes Windows — isso não indica nenhum problema no código, apenas uma diferença de convenção entre sistemas, mas o `.gitattributes` evita que o aviso apareça, deixando o comportamento explícito e consistente para qualquer pessoa que clonar o repositório.
+O projeto inclui um arquivo `.gitattributes` com a regra `* text=auto`, que padroniza como o Git trata quebras de linha (`LF`/`CRLF`) entre diferentes sistemas operacionais. Sem esse arquivo, o Git costuma exibir avisos do tipo `warning: LF will be replaced by CRLF` ao adicionar arquivos em ambientes Windows, isso não indica nenhum problema no código, apenas uma diferença de convenção entre sistemas, mas o `.gitattributes` evita que o aviso apareça, deixando o comportamento explícito e consistente para qualquer pessoa que clonar o repositório.
 
 ---
 
@@ -199,7 +199,7 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 ## 📱 Responsividade
 
 - 💻 **Desktop:** foto e texto da seção "Sobre" lado a lado; produtos e vantagens organizados em linhas de Flexbox, quebrando conforme o espaço disponível.
-- 📱 **Mobile:** foto e texto do "Sobre" empilham e centralizam, com a foto ocupando a largura total (mesmo tamanho das fotos dos produtos); cards de produtos e vantagens a 100% da largura; botão flutuante do WhatsApp menor e reposicionado mais para cima, para não sobrepor os créditos do rodapé.
+- 📱 **Mobile:** foto e texto do "Sobre" empilham e centralizam, com a foto ocupando a largura total (mesmo tamanho das fotos dos produtos); cards de produtos a 100% da largura; cards de vantagens em grid de 2 colunas; botão flutuante do WhatsApp menor e reposicionado mais para cima, para não sobrepor os créditos do rodapé.
 - 💡 **Tablet:** adaptação automática com quebra fluida de colunas, sem necessidade de breakpoint adicional.
 
 ---
@@ -237,6 +237,13 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 
 - 🔗 URL de publicação atualizada de `produtos-da-maria.vercel.app` para `landing-dona-maria.vercel.app`, refletida no `index.html` (tags Open Graph/Twitter) e no `README.md`.
 - ➕ Adicionado **`.gitattributes`** (`* text=auto`), para padronizar quebras de linha entre sistemas operacionais e evitar avisos do Git ao adicionar arquivos.
+
+### Quinta rodada (ajustes finos de responsividade e conteúdo)
+
+- 🏷️ Adicionado título de seção "Nossos Produtos" (`.section-title`) antes do catálogo, deixando essa faixa identificada da mesma forma que as demais.
+- 📱 Cards de "Vantagens" reorganizados no mobile em grid de 2 colunas, em vez de empilhados em coluna única.
+- 🔡 Rodapé com fonte dos créditos reduzida e espaçamento vertical ajustado, para ficar mais centralizado.
+- 💬 Citação com aspas decorativas ajustadas no mobile, para não sobrepor o texto em telas estreitas.
 
 ---
 
