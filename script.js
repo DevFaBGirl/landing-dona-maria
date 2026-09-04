@@ -26,6 +26,15 @@ telefoneInput.addEventListener("input", function () {
 
 formPedido.addEventListener("submit", function (evento) {
   evento.preventDefault();
+
+  const nome = formPedido.nome.value.trim();
+  const telefone = telefoneInput.value.trim();
+  const mensagem = formPedido.mensagem.value.trim();
+
+  const texto = `Olá Dona Maria! Meu nome é ${nome} ${telefone}. ${mensagem}`;
+  const url = `https://wa.me/5561992923420?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
   modalSucesso.hidden = false;
 });
 
