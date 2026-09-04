@@ -59,6 +59,7 @@ Além disso, o cabeçalho (`header`), o rodapé (`footer`) e o botão flutuante 
 - 🎨 Cards de "Vantagens" com fundo dourado e tipografia serifada em itálico, visual mais clássico, sem ícones.
 - 📝 Formulário de contato (nome, telefone, mensagem):
   - **Máscara de telefone em tempo real**, formatando automaticamente para `(XX) XXXXX-XXXX` enquanto a pessoa digita, e limitando a 11 dígitos (DDD + celular), evita números incompletos ou com dígitos a mais.
+  - **Envio direto para o WhatsApp**, montando a mensagem com nome, telefone e pedido e abrindo o `wa.me` em nova aba.
   - **Modal de sucesso customizado** ao enviar o pedido (em vez do alerta padrão do navegador), com as mesmas cores do site; a página recarrega automaticamente ao clicar em "OK".
 - 💚 Botão flutuante de WhatsApp (com imagem própria, recortada em círculo), fixo no canto da tela, como chamada rápida de contato.
 - 📱 Design responsivo (mobile-first), adaptado para qualquer tela.
@@ -87,7 +88,7 @@ Além disso, o cabeçalho (`header`), o rodapé (`footer`) e o botão flutuante 
 - **CSS3**, estilos e responsividade.
 - **Flexbox**, organização das faixas de sobre, produtos, vantagens e formulário.
 - **Media Queries**, adaptação para telas menores.
-- **JavaScript** (`script.js`), usado apenas para dois recursos pontuais que o CSS puro não resolve sozinho: a máscara de telefone em tempo real e o modal de sucesso do formulário (com o recarregamento da página ao confirmar). O restante da página não depende de JavaScript para funcionar.
+- **JavaScript** (`script.js`), usado apenas para três recursos pontuais que o CSS puro não resolve sozinho: a máscara de telefone em tempo real, o envio do pedido para o WhatsApp e o modal de sucesso do formulário (com o recarregamento da página ao confirmar). O restante da página não depende de JavaScript para funcionar.
 
 ---
 
@@ -166,13 +167,17 @@ O projeto está publicado gratuitamente na **Vercel**:
 
 ### 🔢 Alterar número do WhatsApp
 
-No arquivo `index.html`, localize o link do botão flutuante:
+O número está em dois lugares: no botão flutuante (`index.html`) e no envio do formulário (`script.js`).
 
 ```html
 <a href="https://wa.me/55110000000?text=..." class="whatsapp-float"></a>
 ```
 
-Substitua o número pelo desejado, no formato: `55` + DDD + número (sem espaços ou símbolos).
+```js
+const url = `https://wa.me/55110000000?text=${encodeURIComponent(texto)}`;
+```
+
+Substitua pelo desejado, no formato: `55` + DDD + número (sem espaços ou símbolos).
 
 ### 💰 Atualizar preços
 
@@ -192,7 +197,7 @@ A formatação `(XX) XXXXX-XXXX` está no `script.js`, no bloco que escuta o eve
 
 ### 📝 Formulário de contato
 
-O formulário atual é apenas front-end (sem back-end/servidor de envio), o "envio" apenas mostra o modal de sucesso e recarrega a página. Para receber os dados de fato, é possível integrar com serviços gratuitos como Formspree, EmailJS ou Google Forms, adicionando o `action` correspondente na tag `<form>` e adaptando o `script.js`.
+Ao enviar, o site monta o texto `Olá Dona Maria! Meu nome é [nome] [telefone]. [pedido]` e abre o WhatsApp em nova aba, além de exibir o modal de sucesso. O campo de telefone usa exemplo genérico `(61) 99999-9999` como placeholder.
 
 ---
 
@@ -244,6 +249,12 @@ O formulário atual é apenas front-end (sem back-end/servidor de envio), o "env
 - 📱 Cards de "Vantagens" reorganizados no mobile em grid de 2 colunas, em vez de empilhados em coluna única.
 - 🔡 Rodapé com fonte dos créditos reduzida e espaçamento vertical ajustado, para ficar mais centralizado.
 - 💬 Citação com aspas decorativas ajustadas no mobile, para não sobrepor o texto em telas estreitas.
+
+### Sexta rodada (integração com WhatsApp)
+
+- 🔢 Número do WhatsApp atualizado para `61 99292-3420` (botão flutuante + envio do formulário).
+- 💬 Formulário passa a abrir o `wa.me` com nome, telefone e pedido, além do modal de sucesso.
+- 🔡 Placeholder do telefone trocado para exemplo genérico `(61) 99999-9999`.
 
 ---
 
